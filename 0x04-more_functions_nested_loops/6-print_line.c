@@ -1,25 +1,20 @@
 #include "main.h"
 
 /**
- * print_line - print line in terminal
- * @n: number of lines
- * Return: \n
+ * print_line - prints a line
+ * @n: variable
+ *
+ * Return: 0
  */
+
 void print_line(int n)
 {
-	int c;
+	int a = 0;
 
-	if (n <= 0)
+	while (a < n && n > 0)
 	{
-		_putchar('\n');
+		_putchar('_');
+		a++;
 	}
-	else
-	{
-		for (c = 0; c < n; c++)
-		{
-			_putchar(95);
-		}
-		_putchar('\n');
-	}
+	_putchar('\n');
 }
-
