@@ -1,22 +1,16 @@
 #include "main.h"
 
 /**
- * _isupper - checks if a character is uppercase
+ * _isupper - checks is a character is uppercase
  * @c: carrier integer variable
  * Return: 1 if true, 0 if false
  */
 
 int _isupper(int c)
 {
-char uppercase = 'A';
-int isupper = 0;
-for (; uppercase <= 'Z'; uppercase++)
-{
-	if (c == uppercase)
+	if (c >= 65 && c <= 90)
 	{
-		isupper = i;
-		break;
+		return (1);
 	}
-}
-return (isupper);
+	return (0);
 }
