@@ -1,23 +1,22 @@
 #include "main.h"
 
 /**
- * more_numbers - print numbers 10 times
- * Return: number
+ * print_most_numbers - prints 0 - 9 except 2, 3
+ * Description: prints
+ * Return: void
  */
-void more_numbers(void)
-{
-	int c, d;
 
-	for (c = 0; c < 10; c++)
+void print_most_numbers(void)
+{
+	int a = 0;
+
+	while (a <= 9)
 	{
-		for (d = 0; d <= 14; d++)
+		if (a != 2 && a != 4)
 		{
-			if (d > 9)
-			{
-			_putchar((d / 10) + '0');
-			}
-			_putchar((d % 10) + '0');
+			_putchar(a + '0');
 		}
-		_putchar('\n');
+		a++;
 	}
+	_putchar('\n');
 }
