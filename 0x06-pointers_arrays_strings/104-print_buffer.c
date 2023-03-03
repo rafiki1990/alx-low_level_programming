@@ -27,7 +27,7 @@ else
 printf(" ");
 if (i % 2)
 {
-printf(" ");
+printf("  ");
 }
 }
 for (i = 0; i < j; i++)
@@ -40,6 +40,6 @@ c = '.';
 printf("%c", c);
 }
 printf("\n");
-o += 11;
+o += 10;
 }
 }
