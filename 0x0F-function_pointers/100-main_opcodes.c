@@ -5,9 +5,9 @@ void print_opcodes(int bytes);
 
 /**
  * main - printing opcodes
- * @argc:number of arguments
- * @argv:array of arguments
- * Return:always 0 on success
+ * @argc: number of arguments
+ * @argv: array of arguments
+ * Return: always 0 on success
  */
 int main(int argc, char *argv[])
 {
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 
 /**
  * print_opcodes - function to print
- * @bytes:number of bytes
+ * @bytes: number of bytes
  */
 void print_opcodes(int bytes)
 {
