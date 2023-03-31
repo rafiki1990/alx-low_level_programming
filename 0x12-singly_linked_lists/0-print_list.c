@@ -1,25 +1,41 @@
-#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "lists.h"
 
 /**
- * print_list - prints all the elements of a linked list
- * @h: pointer to the list_t list to print
+ * add_node_end - adds a new node at the end of a linked list
+ * @head: double pointer to the list_t list
+ * @str: string to put in the new node
  *
- * Return: the number of nodes printed
+ * Return: address of the new element, or NULL if it failed
  */
-size_t print_list(const list_t *h)
+list_t *add_node_end(list_t **head, const char *str)
 {
-size_t s = 0;
+list_t *new;
+list_t *temp = *head;
+unsigned int len = 0;
 
-while (h)
+while (str[len])
+len++;
+
+new = malloc(sizeof(list_t));
+if (!new)
+return (NULL);
+
+new->str = strdup(str);
+new->len = len;
+new->next = NULL;
+
+if (*head == NULL)
 {
-if (!h->str)
-printf("[0] (nil)\n");
-else
-printf("[%u] %s\n", h->len, h->str);
-h = h->next;
-s++;
+*head = new;
+return (new);
 }
 
-return (s);
+while (temp->next)
+temp = temp->next;
+
+temp->next = new;
+
+return (new);
 }
