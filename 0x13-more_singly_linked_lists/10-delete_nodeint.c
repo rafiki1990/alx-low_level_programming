@@ -28,7 +28,7 @@ while (j < index - 1)
 if (!t || !(t->next))
 return (-1);
 t = t->next;
-i++;
+j++;
 }
 
 g = t->next;
