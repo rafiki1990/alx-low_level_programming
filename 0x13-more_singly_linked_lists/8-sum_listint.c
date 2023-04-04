@@ -9,11 +9,11 @@
 int sum_listint(listint_t *head)
 {
 int s = 0
-listint_t *t = head;
-while (t)
+listint_t *d = head;
+while (d)
 {
-s += t->n;
-t = t->next;
+s += d->n;
+d = d->next;
 }
 
 return (s);
