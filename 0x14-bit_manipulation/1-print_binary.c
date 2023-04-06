@@ -1,12 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 
 void print_binary(unsigned long int n)
 {
 	int i;
-	for (i = (1 << 10) + 1; i > 1; i = i / 2)
+	int o = 0;
+	unsigned long int k;
+
+	for (i = 10; i >= 0; i--)
+	{
+	k = n >> i;
+
+	if (k & 1)
+	{
+		printf("1");
+		o++;
+	}
+	else if (o)
 	
-		(n & 1) ? printf("0") :printf("1");
+		printf("0");
+	}
+	if (!o)
 	
+		printf("0");
 }
