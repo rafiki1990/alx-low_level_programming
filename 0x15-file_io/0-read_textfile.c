@@ -1,7 +1,12 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-
+/**
+ * ssize_t - function that reads a text file and prints it to the POSIX standard output.
+ * @filename: file name 
+ * @letters: letters
+ * return: value
+ */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
