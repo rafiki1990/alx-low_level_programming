@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * ssize_t - function that reads a text file and prints it to the POSIX standard output.
- * @filename: file name 
- * @letters: letters
+ * read_textfile - function that reads a text file and prints output.
+ * @filename: file to  read
+ * @letters: letters to readable
  * return: value
  */
 
