@@ -64,16 +64,16 @@ fd = open(argv[2], O_RDONLY);
 r = read(fd, buffer, 1024);
 s = open(argv[3], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
-while (r > 0)
+do
 {
-	if (fd == -1 || r == -1)
+	if (fd == -1 || r == 1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]);
 		free(buffer);
 		exit(98);
 	}
 	w = write(s, buffer, r);
-	if (s == -1 || w == -1)
+	if (s == -1 || w == 1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[3]);
 		free(buffer);
@@ -81,7 +81,7 @@ while (r > 0)
 	}
 	r = read(fd, buffer, 1024);
 	s = open(argv[3], O_WRONLY | O_APPEND);
-}
+}while (r > 0);
 free(buffer);
 close_file(fd);
 close_file(s);
