@@ -2,10 +2,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * read_textfile - function that reads a text file print the POSIX.
+ * read_textfile- Read text file print to POSIX.
  * @filename: NULL return 0
  * @letters: letters to readable
- * return: returns the actual number of letters it could read and print.
+ * Return: w- actual number of bytes read and printed
+ *        0 when function fails or filename is NULL.
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
