@@ -52,7 +52,7 @@ void print_magic(unsigned char *e_ident)
 
 	printf("  Magic:   ");
 
-	for (i= 0; i < EI_NIDENT; i++)
+	for (i = 0; i < EI_NIDENT; i++)
 	{
 		printf("%02x", e_ident[i]);
 
@@ -174,7 +174,6 @@ void print_osabi(unsigned char *e_ident)
 	default:
 		printf("<unknown: %x>\n", e_ident[EI_OSABI]);
 	}
-}
 
 /**
  * print_abi - Prints the ABI version of an ELF header.
@@ -311,4 +310,5 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	free(header);
 	close_elf(o);
 	return (0);
+}
 }
