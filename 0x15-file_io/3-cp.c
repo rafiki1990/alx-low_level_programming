@@ -21,7 +21,7 @@ char *create_buffer(char *file)
 	if (buffer == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
-		exit(99);
+		exit(100);
 	}
 	return (buffer);
 }
@@ -58,7 +58,7 @@ char *buffer;
 if (argc != 3)
 {
 	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-	exit(97);
+	exit(98);
 }
 buffer = create_buffer(argv[2]);
 fd = open(argv[1], O_RDONLY);
@@ -70,14 +70,14 @@ do {
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		free(buffer);
-		exit(98);
+		exit(99);
 	}
 	w = write(s, buffer, r);
 	if (s == -1 || w == 1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		free(buffer);
-		exit(99);
+		exit(100);
 	}
 	r = read(fd, buffer, 1024);
 	s = open(argv[2], O_WRONLY | O_APPEND);
