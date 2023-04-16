@@ -61,7 +61,7 @@ if (argc != 3)
 	exit(97);
 }
 buffer = create_buffer(argv[2]);
-fd = open(argv[2], O_RDONLY);
+fd = open(argv[1], O_RDONLY);
 r = read(fd, buffer, 1024);
 s = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
