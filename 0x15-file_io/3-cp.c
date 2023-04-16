@@ -77,7 +77,7 @@ do {
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		free(buffer);
-		exit(99);
+		exit(100);
 	}
 	r = read(fd, buffer, 1024);
 	s = open(argv[2], O_WRONLY | O_APPEND);
